@@ -1,10 +1,10 @@
-import 'package:jang_talk/src/screens/intro/components/care_view.dart';
-import 'package:jang_talk/src/screens/intro/components/center_next_button.dart';
-import 'package:jang_talk/src/screens/intro/components/mood_diary_vew.dart';
-import 'package:jang_talk/src/screens/intro/components/relax_view.dart';
-import 'package:jang_talk/src/screens/intro/components/splash_view.dart';
-import 'package:jang_talk/src/screens/intro/components/top_back_skip_view.dart';
-import 'package:jang_talk/src/screens/intro/components/welcome_view.dart';
+import 'package:jang_talk/screens/intro/components/care_view.dart';
+import 'package:jang_talk/screens/intro/components/center_next_button.dart';
+import 'package:jang_talk/screens/intro/components/mood_diary_vew.dart';
+import 'package:jang_talk/screens/intro/components/relax_view.dart';
+import 'package:jang_talk/screens/intro/components/splash_view.dart';
+import 'package:jang_talk/screens/intro/components/top_back_skip_view.dart';
+import 'package:jang_talk/screens/intro/components/welcome_view.dart';
 import 'package:flutter/material.dart';
 
 class IntroductionAnimationScreen extends StatefulWidget {
