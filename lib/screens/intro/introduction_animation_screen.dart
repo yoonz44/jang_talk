@@ -6,6 +6,8 @@ import 'package:jang_talk/screens/intro/components/splash_view.dart';
 import 'package:jang_talk/screens/intro/components/top_back_skip_view.dart';
 import 'package:jang_talk/screens/intro/components/welcome_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:jang_talk/screens/counsel/counsel.dart';
 
 class IntroductionAnimationScreen extends StatefulWidget {
   const IntroductionAnimationScreen({Key? key}) : super(key: key);
@@ -112,6 +114,6 @@ class _IntroductionAnimationScreenState
   }
 
   void _signUpClick() {
-    Navigator.pop(context);
+    Get.to(SelectType());
   }
 }

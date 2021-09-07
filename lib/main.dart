@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jang_talk/screens/intro/intro.dart';
 import 'package:jang_talk/constants/constants.dart';
 import 'package:jang_talk/providers/app_theme.dart';
 import 'package:get/get.dart';
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.android,
       ),
-      home: IntroductionAnimationScreen(),
     );
   }
 }

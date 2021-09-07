@@ -81,7 +81,7 @@ class WelcomeView extends StatelessWidget {
                 padding:
                     EdgeInsets.only(left: 64, right: 64, top: 16, bottom: 16),
                 child: Text(
-                  "빨리 하단의 시작버튼을 누르고 \n니놈의 이야기를 써내려가!",
+                  "빨리 하단 시작버튼 눌러",
                   textAlign: TextAlign.center,
                 ),
               ),
