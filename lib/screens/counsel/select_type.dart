@@ -14,21 +14,21 @@ class SelectType extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _typeButton('질문 & 답변 형식'),
+                _typeButton('질문 & 답변 형식', () => Get.to(Qna())),
                 Divider(),
-                _typeButton('자유 형식'),
+                _typeButton('자유 형식', () => Get.to(Free())),
               ],
             )
         )
     );
   }
 
-  Widget _typeButton(title) {
+  Widget _typeButton(title, Function _onPressed) {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () async {
-          Get.to(Free());
+          _onPressed();
         },
         style: ButtonStyle(
           padding: MaterialStateProperty.all<EdgeInsets>(
