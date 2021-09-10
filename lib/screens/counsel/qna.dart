@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:conditional_questions/conditional_questions.dart';
+import 'package:get/get.dart';
+import 'package:jang_talk/screens/intro/intro.dart';
 
 class Qna extends StatefulWidget {
   const Qna({Key? key}) : super(key: key);
@@ -24,9 +26,10 @@ class _QnaState extends State<Qna> {
               color: Colors.deepOrange,
               splashColor: Colors.orangeAccent,
               onPressed: () async {
-                if (_key.currentState!.validate()) {
-                  print("validated!");
-                }
+                // if (_key.currentState!.validate()) {
+                //   print("validated!");
+                // }
+                Get.to(IntroductionAnimationScreen());
               },
               child: Text("Submit"),
             )
@@ -87,7 +90,8 @@ class _QnaState extends State<Qna> {
                   ],
                   'No': [
                     PolarQuestion(
-                        question: "Have you ever been infected with chicken pox?",
+                        question:
+                            "Have you ever been infected with chicken pox?",
                         answers: ["Yes", "No"]),
                   ]
                 }),
