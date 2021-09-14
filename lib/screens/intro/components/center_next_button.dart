@@ -103,17 +103,9 @@ class CenterNextButton extends StatelessWidget {
                                     MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    '작성하기',
+                                    '시작하기',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                  Text(
-                                    '( 9/10 )',
-                                    style: TextStyle(
-                                      color: Colors.grey,
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500,
                                     ),

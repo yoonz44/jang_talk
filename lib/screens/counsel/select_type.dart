@@ -15,8 +15,6 @@ class SelectType extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _typeButton('질문 & 답변 형식', () => Get.to(Qna())),
-                Divider(),
-                _typeButton('자유 형식', () => Get.to(Free())),
               ],
             )
         )
