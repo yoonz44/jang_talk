@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+import 'package:jang_talk/screens/counsel/counsel.dart';
 import 'package:jang_talk/screens/home/components/wave_view.dart';
 import 'package:jang_talk/screens/home/home_theme.dart';
 import 'package:jang_talk/main.dart';
@@ -69,7 +71,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                       padding: const EdgeInsets.only(
                                           left: 4, bottom: 3),
                                       child: Text(
-                                        '10!',
+                                        '10',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: FitnessAppTheme.fontName,
@@ -81,9 +83,9 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 8, bottom: 8),
+                                          left: 2, bottom: 8),
                                       child: Text(
-                                        '도전하세요',
+                                        '가지 비밀이야기',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontFamily: FitnessAppTheme.fontName,
@@ -137,7 +139,9 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: <Widget>[
                                         MaterialButton(
-                                          onPressed: () => print(100),
+                                          onPressed: () => {
+                                            Get.to(Qna())
+                                          },
                                           color: FitnessAppTheme.nearlyDarkBlue,
                                           child: Text(
                                             "Let's Go",

@@ -2,18 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:jang_talk/constants/constants.dart';
 import 'package:jang_talk/providers/app_theme.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final prefs = await SharedPreferences.getInstance();
+  runApp(MyApp(prefs.getBool('isIntro') ?? false));
 }
 
 class MyApp extends StatelessWidget {
+  final bool isIntro;
+
+  MyApp(this.isIntro);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: '장톡',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: this.isIntro ? '/home' : '/',
       getPages: AppRoutes.routes,
       theme: ThemeData(
         primarySwatch: Colors.blue,

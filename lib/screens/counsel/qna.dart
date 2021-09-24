@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:conditional_questions/conditional_questions.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jang_talk/screens/intro/intro.dart';
+import 'package:jang_talk/screens/home/home.dart';
 
 class Qna extends StatefulWidget {
   const Qna({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _QnaState extends State<Qna> {
                 // if (_key.currentState!.validate()) {
                 //   print("validated!");
                 // }
-                Get.to(IntroductionAnimationScreen());
+                Get.off(() => HomeMain());
               },
               child: Text("Submit"),
             )

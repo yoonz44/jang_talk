@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:jang_talk/screens/home/home.dart';
 import 'package:jang_talk/screens/intro/components/care_view.dart';
 import 'package:jang_talk/screens/intro/components/center_next_button.dart';
@@ -17,8 +18,7 @@ class IntroductionAnimationScreen extends StatefulWidget {
       _IntroductionAnimationScreenState();
 }
 
-class _IntroductionAnimationScreenState
-    extends State<IntroductionAnimationScreen> with TickerProviderStateMixin {
+class _IntroductionAnimationScreenState extends State<IntroductionAnimationScreen> with TickerProviderStateMixin {
   AnimationController? _animationController;
 
   @override
@@ -113,7 +113,10 @@ class _IntroductionAnimationScreenState
     }
   }
 
-  void _signUpClick() {
-    Get.to(HomeMain());
+  void _signUpClick() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool('isIntro', true);
+
+    Get.off(() => HomeMain());
   }
 }
